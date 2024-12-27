@@ -1,5 +1,7 @@
 
 
+isim = "Burak"
+
 # Değişkenler: Programlama dillerinde veri saklamak için kullanılan yapılardır.
 # Değişkenlerin tanımlanması: değişken_adı = değer
 #region Değişkenlerin isimlendirilmesi için kullanılan bazı kurallar:
@@ -25,15 +27,21 @@
 # örn: print, input, len, type, range, str, int, float, list, tuple, dict, set, bool, math, os, sys, random, datetime, numpy, pandas, matplotlib, tensorflow, keras
 #endregion
 
+print("Merhaba Dünya!") # çkt: Merhaba Dünya!
 
-print("hello world")
+print("hello world") # çkt: hello world
 
 #region Ekrana Yazdırma
 # print(değişken): Değişkenin değerini ekrana yazdırır ve bir alt satıra geçer..
 # print("metin"): Metni ekrana yazdırır.
-print("metin1")
-print()
-print("metin2")
+print("metin1") # çkt: metin1
+print() # çkt: Boş bir satır ekler.
+print("metin2") # çkt: metin2
+isim = "Arda"
+print(isim) # çkt: Arda
+
+
+
 # print(): Boş bir satır ekler.
 # print(değişken1, değişken2): Birden fazla değişkeni ekrana yazdırır.
 # print("metin" + değişken): Metin ve değişkeni birleştirerek ekrana yazdırır.
@@ -47,50 +55,61 @@ print("metin2")
 # String: Metinsel ifadeleri temsil eder.
 # Tanımlama: Tek tırnak ('), çift tırnak ("), üç tırnak (''' veya """) içerisinde tanımlanabilir.
 name = "Ali"
-print(name)
+print(name) #çkt: Ali
 surname = "Yılmaz"
 age = "25"
 
 print("Merhaba benim adım " , name , " ve soyadım " , surname , " yaşım ise " , age)
+# çkt: Merhaba benim adım Ali ve soyadım Yılmaz yaşım ise 25
 
 # Integer (Tam Sayı) Değişkenler
 # Integer: Tam sayıları temsil eder.
 
 num1 = 5
 num2 = 10
-print(num1 + num2)
+print(num1 + num2) # çkt: 15
 result = num1 + num2
-print(result)
+print(result) # çkt: 15
 
 # Float (Ondalıklı Sayı) Değişkenler
 # Float: Ondalıklı sayıları temsil eder.
 # Tanımlama: Ondalıklı sayılar tam ve ondalık bölüm arasına nokta (.) koyarak ifade edilir.
+# Double veri tipi python'da yoktur. Ondalıklı sayılar float veri tipi ile temsil edilir.
 
 num3 = 5.5
-num4 = 10.59
-print(num3 + num4)
+num4 = 10.5
+print(num3 + num4) # çkt: 16.0 (float)
 result = num3 + num4
-print(result)
+print(result) # çkt: 16.0 (float)
 # %.2f: Ondalıklı sayıları 2 basamak olarak gösterir.
 # Noktanın önündeki sayıyı değiştirerek farklı basamak sayıları gösterebilirsiniz.
-print("Sonuç: %.2f" % result)
+print("Sonuç: %.2f" % result) # çkt: Sonuç: 16.00
 
 # Boolean (Mantıksal) Değişkenler
 # Boolean: Mantıksal verileri temsil eder.
 # True: Doğru anlamına gelir. False: Yanlış anlamına gelir.
 situation = True
-print(situation)
+print(situation) # çkt: True
 situation = False
-print(situation)
+print(situation) # çkt: False
 #endregion
 
 #region Değişken Tipi Öğrenme
 # type(): Değişkenin tipini öğrenmek için kullanılır.
+
+x = 5               # int
+y = 3.14            # float
+name = "Ali"        # str
+is_student = True   # bool
+
+
+
+
 type1 = type(name)
-print(type1)
-print(type(num1))
-print(type(num3))
-print(type(situation))
+print(type1) # çkt: <class 'str'> (string)
+print(type(x)) # çkt: <class 'int'> (integer)
+print(type(y)) # çkt: <class 'float'> (float)
+print(type(is_student)) # çkt: <class 'bool'> (boolean)
 #endregion
 
 #region f-string
@@ -100,25 +119,36 @@ print(f"Merhaba benim adım {name} ve soyadım {surname} yaşım ise {age}")
 # Kaçış Dizileri (Escape Characters) : String ifadeler içerisinde özel karakterleri kullanmak için kullanılır.
 # \n: Bir alt satıra geçer.
 print("Merhaba\nBenim\nAdım\nAli")
+# çkt: Merhaba
+#      Benim
+#      Adım
+#      Ali
 
-# \t: Bir tab boşluk bırakır.
+# \t: Bir tab (4 space:    ) boşluk bırakır.
 print("Merhaba\tBenim\tAdım\tAli")
+# çkt: Merhaba    Benim   Adım    Ali
 # \": Çift tırnak ekler.
 # \': Tek tırnak ekler.
 # \\: Ters eğik çizgi ekler.
 # Eğer ifademizin kaçış dizilerinden etkilenmesini istemiyorsak başına r koyarak raw string ifadesi oluşturabiliriz.
 print(r"Merhaba\nBenim\nAdım\nAli")
+# çkt: Merhaba\nBenim\nAdım\nAli
 #endregion
 
 #regionDeğişken Tür Dönüşümleri
 float_number = 5.5
 print(f"float_number değişkeninin ilk tipi {type(float_number)}")
+# çkt: float_number değişkeninin ilk tipi <class 'float'>
+
 # int(): Integer türüne dönüştürme işlemi yapar.
 float_number = int(float_number)
 print(f"float_number değişkeninin ilk dönüşümden sonraki tipi {type(float_number)}")
+# çkt: float_number değişkeninin ilk dönüşümden sonraki tipi <class 'int'>
+
 # str(): String türüne dönüştürme işlemi yapar.
 float_number = str(float_number)
 print(f"float_number değişkeninin ikinci dönüşümden sonraki tipi {type(float_number)}")
+# çkt: float_number değişkeninin ikinci dönüşümden sonraki tipi <class 'str'>
 # float(), bool(): Float ve Boolean türlerine dönüştürme işlemi yapar.
 #endregion
 
@@ -131,16 +161,21 @@ name2 = input("Adınızı giriniz: ")
 surname2 = input("Soyadınızı giriniz: ")
 age2 = input("Yaşınızı giriniz: ")
 print(f"Merhaba benim adım {name2} ve soyadım {surname2} yaşım ise {age2}")
-#print(f"Merhaba benim adım {name} ve soyadım {surname} yaşım ise {age}, 5 yıl sonra {(age) + 5} yaşında olacağım.") # Hata verir.
-print(type(age2))
-age2 = int(age2)
-print(type(age2))
-#print(f"Merhaba benim adım {name} ve soyadım {surname} yaşım ise {age}, 5 yıl sonra {age + 5} yaşında olacağım.")
+# çkt: Merhaba benim adım Ali ve soyadım Yılmaz yaşım ise 25
 
+#print(f"Merhaba benim adım {name} ve soyadım {surname} yaşım ise {age}, 5 yıl sonra {(age) + 5} yaşında olacağım.") # Hata verir.
+# Hatanın nedeni input() fonksiyonu ile alınan verinin (age) string türünde olmasıdır. String bir değişkenle matematiksel işlemler yapılamaz. Bu yüzden tür dönüşümü yapılmalıdır.
+
+print(type(age2)) # çkt: <class 'str'>
+age2 = int(age2)
+print(type(age2)) # çkt: <class 'int'>
+print(f"Merhaba benim adım {name} ve soyadım {surname} yaşım ise {age2}, 5 yıl sonra {age2 + 5} yaşında olacağım.")
+# çkt: Merhaba benim adım Ali ve soyadım Yılmaz yaşım ise 25, 5 yıl sonra 30 yaşında olacağım. (veriler kullanıcından alındığı için değişkenlik gösterebilir.)
 # input() fonksiyonu için best practice:
 number11 = int(input("Bir sayı giriniz: "))
 print(type(number11))
 
+isim1 = input("İsminizi Giriniz: ")
 
 #endregion
 
